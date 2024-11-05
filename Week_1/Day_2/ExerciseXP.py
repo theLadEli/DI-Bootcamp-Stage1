@@ -1,6 +1,6 @@
-import random
+# import random
 
-# # Exercise 1
+# # # Exercise 1
 # my_fav_numbers = {18,27,36,45,34}
 
 # my_fav_numbers.add(1)
@@ -14,10 +14,10 @@ import random
 
 # print(our_fav_numbers)
 
-# # Exercise 2
+# # # Exercise 2
 # # No
 
-# # Exercise 3
+# # # Exercise 3
 # basket = ["Banana", "Apples", "Oranges", "Blueberries"]
 # print(basket)
 # basket.pop(basket.index("Banana"))
@@ -103,25 +103,25 @@ import random
 # print(f'Your pizza costs ${pizza_price}')
 
 # Exercise 9
-# total_cost = 0
-# family_members_loop = 0
-# family_members = 0
+total_cost = 0
+family_members_loop = 0
+family_members = 0
 
-# family_members = int(input("How many members are in your family?"))
+family_members = int(input("How many members are in your family?"))
 
-# while family_members_loop != family_members:
-#     age = int(input("Input the age of the family member."))
+while family_members_loop != family_members:
+    age = int(input("Input the age of the family member."))
 
-#     if (age < 3):
-#         total_cost = total_cost + 0
-#     elif (age < 12):
-#         total_cost = total_cost + 10
-#     elif (age >= 12):
-#         total_cost = total_cost + 15
+    if (age < 3):
+        total_cost = total_cost + 0
+    elif (age < 12):
+        total_cost = total_cost + 10
+    elif (age >= 12):
+        total_cost = total_cost + 15
 
-#     family_members_loop = family_members_loop+1
+    family_members_loop = family_members_loop+1
 
-# print(f"The total ticket costs is ${total_cost}")
+print(f"The total ticket costs is ${total_cost}")
 
 # # Exercise 9.4
 # teenager_names = []
@@ -139,5 +139,5 @@ import random
 
 # print(teenager_names)
 
-# Exercise 10
-sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+# # Exercise 10
+# sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
