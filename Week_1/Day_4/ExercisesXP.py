@@ -98,3 +98,52 @@ import random
 #     print(f'The temprature now is {celcius} degrees Celcius.')
 
 # main()
+
+# # Exercise 8
+# data = [
+#     {
+#         "question": "What is Baby Yoda's real name?",
+#         "answer": "Grogu"
+#     },
+#     {
+#         "question": "Where did Obi-Wan take Luke after his birth?",
+#         "answer": "Tatooine"
+#     },
+#     {
+#         "question": "What year did the first Star Wars movie come out?",
+#         "answer": "1977"
+#     },
+#     {
+#         "question": "Who built C-3PO?",
+#         "answer": "Anakin Skywalker"
+#     },
+#     {
+#         "question": "Anakin Skywalker grew up to be who?",
+#         "answer": "Darth Vader"
+#     },
+#     {
+#         "question": "What species is Chewbacca?",
+#         "answer": "Wookiee"
+#     }
+# ]
+
+# answ_correct = []
+# answ_incorrect = []
+
+# def questionnaire():
+#     for i in data:
+#         user_answer = input(i["question"]).lower()
+#         if user_answer == i["answer"].lower():
+#             answ_correct.append(i)
+#         else:
+#             answ_incorrect.append(i)
+    
+#     print(f'Game Over!\n✅ Total Correct: {len(answ_correct)}\n❌ Total Incorrect: {len(answ_incorrect)}')
+#     check_score()
+
+# def check_score():
+#     if len(answ_incorrect) > 3:
+#         print('You got more then three incorrect, try again.')
+#         questionnaire()
+
+# questionnaire()
