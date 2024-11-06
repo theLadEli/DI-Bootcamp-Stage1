@@ -7,6 +7,7 @@ for index, letter in enumerate(word):
     else:
         words_by_user[letter]=[index]
 print(words_by_user)
+
 #challenge2
 grocery_dic={'water':'$5',
              'apples':'$20',
