@@ -1,7 +1,7 @@
 import itertools
 
 in_game = True
-players = ['X', 'Y']
+players = ['X', '0']
 iter_players = itertools.cycle(players)
 board = [
     ['   ','   ','   '],
@@ -33,10 +33,30 @@ def display_board():
 
     print("*******************\n")
 
-def play():
-    current_player = next(iter_players, )
+display_board()
 
-    display_board()
+def check_win(row,col,player):
+    player_input = board[row][col]
+    combo_matches = 0
+
+    print('check_win')
+    for combo in win_combinations:
+        for cell in combo:
+            # print("Board cell... " + board[cell[0]][cell[1]])
+            # print("Player input " + player_input)
+            # if (board[cell[0]][cell[1]] != '   ') and (board[cell[0]][cell[1]] == player_input):
+            if (board[cell[0]][cell[1]] != '   '):
+                combo_matches += 1
+                print("combo", combo_matches)
+                print(f'Combo matches = {combo_matches}')
+
+        if combo_matches == 3:
+            in_game = False
+
+def play():
+    current_player = next(iter_players)
+
+
     print(f'Player {current_player}\'s turn.\n')
 
     row = (int(input('Enter row: ')))-1
@@ -47,19 +67,6 @@ def play():
     display_board()
 
     check_win(row,col,current_player)
-
-def check_win(row,col,player):
-    combo_matches = 0
-
-    for combo in win_combinations:
-        for cell in combo:
-            for value in cell:
-                if value == (row,col):
-                    combo_matches += 1
-                    print(f'Combo matches = {combo_matches}')
-
-        if combo_matches == 3:
-            in_game = False
 
 while in_game == True:
     play()
