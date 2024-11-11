@@ -12,3 +12,8 @@ def add_dog():
     Dogs("Ness",22)
 
 add_dog()
+
+class Zoo:
+    def __init__(self, zoo_name):
+        self.zoo_name = zoo_name    # This is an parameter/argument and an attribute
+        self.animals = []   # This is just an attribute

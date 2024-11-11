@@ -1,10 +1,10 @@
 # # Challenge 1
-# # Unsure how to use list comprehension for this
-# user_words_inp = input("Input multiple words separated by comma.")
-# user_words_inp = user_words_inp.split(',')
-# user_words_inp = sorted(user_words_inp)
+# Unsure how to use list comprehension for this
+user_words_inp = input("Input multiple words separated by comma.")
+user_words_inp = user_words_inp.split(',')
+user_words_inp = sorted(user_words_inp)
 
-# print(user_words_inp)
+print(user_words_inp)
 
 # Challenge 2
 user_sentence = input("Input your sentence to return the longest word.")
