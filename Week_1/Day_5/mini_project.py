@@ -39,16 +39,19 @@ def check_win(row,col,player):
     player_input = board[row][col]
     combo_matches = 0
 
-    print('check_win')
+
     for combo in win_combinations:
         for cell in combo:
+            print(board[cell[0]][cell[0]])
+            # if cell == player_input:
+                # print(cell)
             # print("Board cell... " + board[cell[0]][cell[1]])
             # print("Player input " + player_input)
             # if (board[cell[0]][cell[1]] != '   ') and (board[cell[0]][cell[1]] == player_input):
-            if (board[cell[0]][cell[1]] != '   '):
-                combo_matches += 1
-                print("combo", combo_matches)
-                print(f'Combo matches = {combo_matches}')
+            # if (board[cell[0]][cell[1]] != '   '):
+            #     combo_matches += 1
+            #     print("combo", combo_matches)
+            #     print(f'Combo matches = {combo_matches}')
 
         if combo_matches == 3:
             in_game = False
