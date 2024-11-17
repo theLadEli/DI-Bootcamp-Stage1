@@ -31,7 +31,13 @@
 -- SET first_name = 'Tom',
 -- last_name = 'Holland'
 -- WHERE first_name = 'Matt'
-SELECT * FROM actors
 
 -- DELETE FROM actors
 -- WHERE actor_id = 7
+
+-- 
+------------ DAILY CHALLENGE
+-- 
+-- SELECT count(actor_id) FROM actors
+INSERT INTO actors(first_name, last_name, age, number_oscars)
+VALUES ('Matt', '08/10/1970'),
