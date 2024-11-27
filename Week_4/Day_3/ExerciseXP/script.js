@@ -86,48 +86,48 @@
 
 // // Exercise 4
 
-// function hotelCost(){
+function hotelCost(){
 
-//     let askUserLengthOfStay = true
-//     var lengthOfStay = prompt("How many nights would you like to stay?")
+    let askUserLengthOfStay = true
+    var lengthOfStay = prompt("How many nights would you like to stay?")
 
-//     while (askUserLengthOfStay === true){
-//         if (isNaN(lengthOfStay) || lengthOfStay == ""){
-//             lengthOfStay = prompt("That was not a valid input, please try again. How many nights would you like to stay?")
-//         } else {
-//             askUserLengthOfStay = false;
-//             return lengthOfStay*140
-//         }
-//     }
+    while (askUserLengthOfStay === true){
+        if (isNaN(lengthOfStay) || lengthOfStay == ""){
+            lengthOfStay = prompt("That was not a valid input, please try again. How many nights would you like to stay?")
+        } else {
+            askUserLengthOfStay = false;
+            return lengthOfStay*140
+        }
+    }
 
-// }
-
+}
 // alert(`Your total cost is: $${hotelCost()}`)
-
-// 2 - Define a function called planeRideCost().
-//  - The function should return a different price depending on the location.
-        //  - “London”: 183$
-        //  - “Paris” : 220$
-        //  - All other destination : 300$
 
 function planeRideCost(){
     const prices = {
         london: 183,
-        laris: 220
+        paris: 220
     }
     var destination = prompt("What is your destination?")
 
     askUserDestination = true
 
     while (askUserDestination){
+        // If user input a number or left blank, ask again
         if (isNaN(destination) === false || destination == ""){
             destination = prompt("That was not a valid input, please try again. What is your destination?")
-        } else {
+        }
+        // If input was text
+        else {
             askUserDestination = false;
             alert(`User input a string of ${destination}`)
 
-            if (prices[destination.toLowerCase]) {
-                alert(prices.destination)
+            // Check if destination exists display cost
+            if (prices[destination.toLowerCase()]) {
+                alert(prices[destination.toLowerCase()])
+            }
+            else {
+                alert(300)
             }
 
         }
