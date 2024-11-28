@@ -1,6 +1,6 @@
 // With jQuery
-$("#headerthree").click(() => {
-    $(this).css({"display":"none"})
+$("#headerthree").click(function() {
+    $(this).css("display","none")
 })
 
 // Without jQuery
