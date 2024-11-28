@@ -1,27 +1,36 @@
+var selectedColor = ''
+
 $("input").each(function() {
-    const color = $(this).val();
-    $(this).css("background-color",color)
+    selectedColor = $(this).val();
+    $(this).css("background-color",selectedColor)
+    $(this).css("color",selectedColor)
 })
 
 $(window).on("load",function(){
-    const squaresWidth = $("#squares").width()
     const squaresHeight = $("#squares").height()
     const totalRows = squaresHeight/22
+    const squaresWidth = $("#squares").width()
     const squaresPerRow = squaresWidth/22
-    // alert(`Width: ${squaresHeight}\nHeight: ${squaresHeight}`)
-    const totalSquaresToAppend = (squaresHeight*squaresWidth)/(22*22)
+    let rowOfSquares = '<div class="color-square"></div>'.repeat(squaresPerRow)
 
-    // Loop to amount of needed rows
     for (let i = 0; i < totalRows; i++) {
         $("#squares").append(`
-            <div class="square-row">${
-                for (let e = 0; e < squaresPerRow; e++){
-                    `<div class="color-square"></div>`
-                }
-            }</div>`)
+            <div class="square-row">${rowOfSquares}</div>
+        `)
     }
 
-    // for(let i = 0; i < totalSquaresToAppend; i++) {
-    //     $("#squares").append(`<div class="color-square"></div>`)
-    // }
+    $(".color-picker").click(function() {
+        selectedColor = $(this).val();
+    })
+
+    $('.color-square').click(function() {
+        $(this).css("background-color",selectedColor)
+    })
 })
+
+function clearBoard() {
+    $(".color-square").each(function() {
+        selectedColor = "white"
+        $(this).css("background-color",selectedColor)
+    })
+}
