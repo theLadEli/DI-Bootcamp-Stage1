@@ -1,4 +1,5 @@
 var selectedColor = ''
+var mousePress = false
 
 $("input").each(function() {
     selectedColor = $(this).val();
@@ -23,9 +24,21 @@ $(window).on("load",function(){
         selectedColor = $(this).val();
     })
 
-    $('.color-square').click(function() {
+    $(".color-square").on("mousedown", function () {
+        mousePress = true;
         $(this).css("background-color",selectedColor)
-    })
+    });
+
+    $(".color-square").on("mouseenter", function () {
+        if (mousePress) {
+            $(this).css("background-color",selectedColor)
+        }
+    });
+
+    $(document).on("mouseup", function () {
+        mousePress = false;
+    });
+
 })
 
 function clearBoard() {
