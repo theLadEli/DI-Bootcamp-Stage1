@@ -1,0 +1,1 @@
+console.log((kg => kg * 1000)(50))
