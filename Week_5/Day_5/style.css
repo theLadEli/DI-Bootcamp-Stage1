@@ -98,3 +98,28 @@ h3 {
     line-height: 150%;
     color: #FFFFFF;
 }
+
+@media (max-width: 1600px) {
+
+    #robots {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 1100px) {
+
+    #robots {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    #robots {
+        grid-template-columns: 1fr;
+    }
+
+}
