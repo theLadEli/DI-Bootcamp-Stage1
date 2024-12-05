@@ -1,6 +1,6 @@
 (username => {
     $("#user-info").append(`
-        <img src="${username}.png">
+        <img src="${username}.png" id="pfp">
         <p>${username}</p>
     `)
 })("Eli")
