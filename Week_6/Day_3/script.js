@@ -1,18 +1,17 @@
-let characters = {}
-let character_id = 0
-let latestCharacterId
+let characters = {};
+let character_id = 0;
+let latestCharacterId;
 
 function updatePageDetails(id) {
-    console.log(characters)
-    $("#name").html(characters[id].name)
-    $("#gender").html(characters[id].gender)
-    $("#race").html(characters[id].race)
-    $("#height").html(characters[id].height)
-    $("#spouse").html(characters[id].spouse)
-    $("#death").html(characters[id].death)
+    $("#name").text(characters[id].name || "N/A")
+    $("#gender").text(characters[id].gender || "N/A")
+    $("#race").text(characters[id].race || "N/A")
+    $("#height").text(characters[id].height || "N/A")
+    $("#spouse").text(characters[id].spouse || "N/A")
+    $("#death").text(characters[id].death || "N/A")
 
     latestCharacterId = id
-}
+};
 
 async function getCharacter() {
 
@@ -22,10 +21,10 @@ async function getCharacter() {
             "content_type": "application/json",
             Authorization: `Bearer ${ACCESS_TOKEN}`
         }
-    })
+    });
 
-    let data = await result.json()
-    let id = data.docs[0]._id
+    let data = await result.json();
+    let id = data.docs[0]._id;
 
     characters[id] = {
         name: data.docs[0].name,
@@ -34,10 +33,10 @@ async function getCharacter() {
         height: data.docs[0].height,
         spouse: data.docs[0].spouse,
         death: data.docs[0].death
-    }
+    };
 
-    updatePageDetails(id)
-    character_id++
+    updatePageDetails(id);
+    character_id++;
 }
 
 function previousCharacter() {
@@ -45,7 +44,7 @@ function previousCharacter() {
     const currentKeysIndex = keys.indexOf(latestCharacterId);
 
     if (currentKeysIndex == 0) {
-        console.log("Nothing prior to load.")
+        console.log("Nothing prior to load.");
     } else {
         const prevKey = keys[currentKeysIndex - 1];
         updatePageDetails(prevKey);
@@ -57,7 +56,7 @@ function nextCharacter() {
     const currentKeysIndex = keys.indexOf(latestCharacterId);
 
     if (currentKeysIndex === keys.length - 1) {
-        console.log("Nothing more to load.")
+        console.log("Nothing more to load.");
     } else {
         const nextKey = keys[currentKeysIndex + 1];
         updatePageDetails(nextKey);

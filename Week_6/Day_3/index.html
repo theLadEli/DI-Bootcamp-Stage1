@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lord of the Rings Characters</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metamorphous&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <h1>Lord of the Rings</h1>
-    <div id="character-info">
-        <p class="ci-data"><b>Name:</b> <div id="name"></div></p>
-        <p class="ci-data"><b>Gender:</b> <div id="gender"></div></p>
-        <p class="ci-data"><b>Race:</b> <div id="race"></div></p>
-        <p class="ci-data"><b>Height:</b> <div id="height"></div></p>
-        <p class="ci-data"><b>Spouse:</b> <div id="spouse"></div></p>
-        <p class="ci-data"><b>Birth:</b> <div id="birth"></div></p>
-        <p class="ci-data"><b>Death:</b> <div id="death"></div></p>
-    </div>
-    <div id="navigation">
-        <button onclick="previousCharacter()">Previous</button>
-        <button onclick="getCharacter()">Find Someone</button>
-        <button onclick="nextCharacter()">Next</button>
-    </div>
+    
+    <main id="content">
+        <h1>Lord of the Rings</h1>
+        <div id="character-info">
+            <div class="ci-data"><b>Name:</b> <div id="name"></div></div>
+            <div class="ci-data"><b>Gender:</b> <div id="gender"></div></div>
+            <div class="ci-data"><b>Race:</b> <div id="race"></div></div>
+            <div class="ci-data"><b>Height:</b> <div id="height"></div></div>
+            <div class="ci-data"><b>Spouse:</b> <div id="spouse"></div></div>
+            <div class="ci-data"><b>Birth:</b> <div id="birth"></div></div>
+            <div class="ci-data"><b>Death:</b> <div id="death"></div></div>
+        </div>
+        <div id="navigation">
+            <button id="previous" onclick="previousCharacter()">↢ Previous</button>
+            <button id="find-someone" onclick="getCharacter()">Find Someone</button>
+            <button id="next" onclick="nextCharacter()">Next ↣</button>
+        </div>
+    </main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="config.js"></script>

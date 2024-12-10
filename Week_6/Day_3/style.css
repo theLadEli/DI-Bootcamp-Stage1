@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: "Raleway", sans-serif;
+    color: #312713;
+}
+
+body {
+    min-height: 100vh;
+    background: url("lotr-map-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#content {
+    background: #d6cab0;
+    padding: 5rem;
+    border-radius: 18px;
+    border: solid 1.5px #312713;
+    box-shadow: 11px 9px 23px 17px rgba(48, 39, 19, 0.27) inset;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 500px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 130%;
+    font-family: "Metamorphous", serif;
+}
+
+#character-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ci-data {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.ci-data b, .ci-data div {
+    font-size: 2rem !important;
+    text-align: left;
+}
+
+#navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#find-someone{
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: #312713;
+    color: #d6cab0;
+    border: none;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+#previous, #next {
+    background: unset;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: #312713;
+    cursor: pointer;
+    border: none;
+}
